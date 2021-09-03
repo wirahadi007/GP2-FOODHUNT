@@ -1,0 +1,10 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  #small2 {
+    width: 60%;
+    margin: auto;
+    margin-top: 30px;
+  }
