@@ -17,7 +17,7 @@ const Cardcontent = () => {
           <div className="foto p-4">
             <img src="https://image.freepik.com/free-photo/fried-rice-with-shrimp-prawn-top-white-plate_1203-7537.jpg" alt="Menu" className="w-full"/>
           </div>
-          <div className="Title p-2">
+          <div className="Title p-4">
             <p>Nasi Goreng</p>
           </div>
           <div className="p-2">
@@ -31,11 +31,13 @@ const Cardcontent = () => {
           <div className="foto p-4">
             <img src="https://image.freepik.com/free-photo/fried-rice-with-shrimp-prawn-top-white-plate_1203-7537.jpg" alt="Menu" className="w-full"/>
           </div>
-          <div className="Title p-2">
+          <div className="Title p-4">
             <p>Nasi Goreng</p>
           </div>
           <div className="p-2">
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Detail</button>
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            onClick={() => setOpenModal(true)}
+            >Detail</button>
           </div>
         </div>
 
@@ -43,11 +45,27 @@ const Cardcontent = () => {
           <div className="foto p-4">
             <img src="https://image.freepik.com/free-photo/fried-rice-with-shrimp-prawn-top-white-plate_1203-7537.jpg" alt="Menu" className="w-full"/>
           </div>
-          <div className="Title p-2">
+          <div className="Title p-4">
             <p>Nasi Goreng</p>
           </div>
           <div className="p-2">
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Detail</button>
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            onClick={() => setOpenModal(true)}
+            >Detail</button>
+          </div>
+        </div>
+
+        <div className="foodCard w-1/5 bg-gray-100 shadow-lg rounded-md">
+          <div className="foto p-4">
+            <img src="https://image.freepik.com/free-photo/fried-rice-with-shrimp-prawn-top-white-plate_1203-7537.jpg" alt="Menu" className="w-full"/>
+          </div>
+          <div className="Title p-4">
+            <p>Nasi Goreng</p>
+          </div>
+          <div className="p-2">
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            onClick={() => setOpenModal(true)}
+            >Detail</button>
           </div>
         </div>
 

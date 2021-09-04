@@ -2,10 +2,6 @@ import React from "react"
 
 const ModalDetail = (props) => {
 
-    const alerting = () => {
-        alert("Pesanan masuk keranjang !!")
-    }
-
     return (
         <div className="modalBg w-screen h-screen top-0 fixed flex justify-center items-center">
           <div className="modalCont w-1/4 h-auto bg-gray-200 shadow-lg flex flex-col p-4 gap-y-4 rounded-md">
@@ -36,7 +32,6 @@ const ModalDetail = (props) => {
               </div>
               <div className="orderBtn flex justify-end">
                 <button
-                    onClick={alerting}
                     className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     Beli
                 </button>
