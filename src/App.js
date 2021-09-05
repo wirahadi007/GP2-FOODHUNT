@@ -6,8 +6,8 @@ import OrderPage from './pages/OrderPages/OrderPage';
 function App() {
   return (
     <div className="App">
-      {/* <MainPage /> */}
-      {/* <OrderPage /> */}
+      <MainPage />
+      <OrderPage />
       <AdminPage />
     </div>
   );

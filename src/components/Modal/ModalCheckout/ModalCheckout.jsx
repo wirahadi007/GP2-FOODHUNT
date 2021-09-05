@@ -12,23 +12,23 @@ const ModalCheckout = (props) => {
 
                     <div class="mt-2 flex flex-col gap-y-2">
                         <label class="block text-sm text-gray-00">Nama Lengkap</label>
-                        <input class="w-full px-2 py-1 text-gray-700 bg-gray-200 rounded"placeholder="Nama Lengkap" />
+                        <input class="w-full px-2 py-1 text-gray-700 bg-gray-200 rounded " />
                     </div>
 
                     <div class="mt-2 flex flex-col gap-y-2">
                         <label class="block text-sm text-gray-00">Alamat</label>
-                        <input class="w-full px-2 py-1 text-gray-700 bg-gray-200 rounded"placeholder="Alamat" />
+                        <input class="w-full px-2 py-1 text-gray-700 bg-gray-200 rounded " />
                     </div>
 
                     <div class="mt-2 flex flex-col gap-y-2">
                         <label class="block text-sm text-gray-00">No Rekening</label>
-                        <input class="w-full px-2 py-1 text-gray-700 bg-gray-200 rounded"placeholder="No Rekening" />
+                        <input class="w-full px-2 py-1 text-gray-700 bg-gray-200 rounded "/>
                     </div>
 
                     <div class="mt-2 flex flex-col gap-y-2">
                             <label class="block text-sm text-gray-00">Metode Pengiriman</label>
                             <select className="w-full p-2 py-1 text-gray-700 bg-gray-200 rounded">
-                                <option placeholder="Pilih Metode Pembayaran"></option>
+                                <option placeholder="Pilih Metode Pembayaran.."></option>
                                 <option>Ambil Sendiri</option>
                                 <option>Delivery</option>
                             </select>
