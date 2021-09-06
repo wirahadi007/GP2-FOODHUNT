@@ -46,17 +46,17 @@ const ModalCheckout = (props) => {
 
                     <div className="mt-2 flex flex-col gap-y-2">
                         <label className="block text-sm text-gray-00">Nama Lengkap</label>
-                        <input name="name" onChange={formHandler} className="w-full px-2 py-1 text-gray-700 bg-gray-200 rounded " />
+                        <input autoComplete="off" required name="name" onChange={formHandler} className="w-full px-2 py-1 text-gray-700 bg-gray-200 rounded " />
                     </div>
 
                     <div className="mt-2 flex flex-col gap-y-2">
                         <label className="block text-sm text-gray-00">No Telepon</label>
-                        <input name="phone" onChange={formHandler} className="w-full px-2 py-1 text-gray-700 bg-gray-200 rounded "/>
+                        <input autoComplete="off" required name="phone" type="number" onChange={formHandler} className="w-full px-2 py-1 text-gray-700 bg-gray-200 rounded "/>
                     </div>
 
                     <div className="mt-2 flex flex-col gap-y-2">
                         <label className="block text-sm text-gray-00">Alamat</label>
-                        <textarea onChange={formHandler} name="address" className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none" rows="4"></textarea>
+                        <textarea autoComplete="off" required onChange={formHandler} name="address" className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none" rows="4"></textarea>
                     </div>
 
                     <div className="btn self-end mt-8">
