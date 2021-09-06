@@ -5,7 +5,6 @@ import ModalDetail from "../Modal/ModalDetail/ModalDetail";
 const Cardcontent = (props) => {
   const [openModal, setOpenModal] = useState(false)
 
-
   return (
     <div className="card-container w-full flex justify-center flex-col gap-y-8">
       <div className="title w-full text-center">

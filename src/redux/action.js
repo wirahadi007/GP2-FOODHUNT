@@ -10,7 +10,7 @@ export const getApi = category => {
               meals = meals.map(el => {
                   return {
                     ...el,
-                    price: 20000,
+                    price: category === 'Beef' || category === 'Chicken' || category === 'Lamb' ? 30000 : 20000, 
                     category,
                     carted: false
                   }
