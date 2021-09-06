@@ -15,7 +15,7 @@ const ModalOrder = (props) => {
 
     return (
         <div className="modalBg w-screen h-screen top-0 fixed flex justify-center items-center">
-            <div className="modalCont w-1/3 h-4/5 bg-gray-200 shadow-lg flex flex-col rounded-lg">
+            <div className="modalCont w-96 h-4/5 bg-gray-200 shadow-lg flex flex-col rounded-lg">
                 <div className="closeBtn flex justify-end p-4">
                     <button onClick={() => props.closeModal(false)} > X </button>
                 </div>

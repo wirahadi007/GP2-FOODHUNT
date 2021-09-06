@@ -33,12 +33,12 @@ const ModalDetail = (props) => {
 
     return (
         <div className="modalBg w-screen h-screen top-0 fixed flex justify-center items-center">
-          <div className="modalCont w-1/4 h-auto bg-gray-200 shadow-lg flex flex-col p-4 gap-y-4 rounded-md">
+          <div className="modalCont w-96 h-auto z-10 bg-gray-200 shadow-lg flex flex-col p-4 gap-y-4 rounded-md">
               <div className="closeBtn flex justify-end">
                 <button onClick={() => props.closeModal(false)}> X </button>
               </div>
               <div className="tumb h-2/5">
-                  <img src={props.strMealThumb} alt="Image" className="h-full w-3/4 rounded-md"/>
+                  <img src={props.strMealThumb} alt="Image" className="h-full w-3/4 mx-auto rounded-md"/>
               </div>
               <div className="info flex">
                   <div className="Nama w-1/2">
