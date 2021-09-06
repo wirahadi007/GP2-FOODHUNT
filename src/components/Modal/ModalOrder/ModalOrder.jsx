@@ -1,11 +1,17 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import ModalOrderCard from './OrderCard';
 
 
 
 const ModalOrder = (props) => {
     const order = useSelector(state => state.order);
+    const history = useHistory()
+
+    const toOrder = () => {
+        history.push("/order")
+    }
 
     return (
         <div className="modalBg w-screen h-screen top-0 fixed flex justify-center items-center">
@@ -25,7 +31,8 @@ const ModalOrder = (props) => {
 
                 <div className="orderBtn flex justify-end p-4">
                 <button
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                    onClick={toOrder}>
                     Order
                 </button>
                 </div>

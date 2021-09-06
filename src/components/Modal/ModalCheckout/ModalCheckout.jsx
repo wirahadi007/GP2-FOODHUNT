@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React from 'react'
+import swal from 'sweetalert';
 
 const ModalCheckout = (props) => {
     const [form, setForm] = React.useState({});
@@ -20,13 +21,21 @@ const ModalCheckout = (props) => {
             order: [...props.order],
             approved: false
         });
-        alert('Pesanan diterima, tunggu pesan kami di Whatsapp');
-        window.location.reload();
+        swal({
+            title: "Pesanan Diterima!",
+            text: "Silahkan tunggu informasi lebih lanjut lewat WhatsApp :",
+            icon: "success",
+            });
+        
+        setTimeout(() => {
+            window.location.reload();
+        },2500)
+        
     }
 
     return (
         <div className="modalBg w-screen h-screen top-0 fixed flex justify-center items-center">
-            <div className="modalCont w-1/2 h-4/5 items-center bg-gray-200 shadow-lg flex flex-col p-4 gap-y-4 rounded-md">
+            <div className="modalCont w-1/2 h-4/5 items-center flex flex-col p-4 gap-y-4 ">
                 <form onSubmit={submitHandler} className="w-4/5 m-4 p-4 bg-white rounded shadow-xl gap-y-2 h-full flex flex-col gap-y-2">
                     <div className="header flex">
                         <p className="text-gray-800 font-medium w-1/2">Informasi Pembelian</p>
@@ -39,18 +48,13 @@ const ModalCheckout = (props) => {
                     </div>
 
                     <div className="mt-2 flex flex-col gap-y-2">
-                        <label className="block text-sm text-gray-00">Alamat</label>
-                        <input name="address" onChange={formHandler} className="w-full px-2 py-1 text-gray-700 bg-gray-200 rounded " />
+                        <label className="block text-sm text-gray-00">No Telepon</label>
+                        <input name="phone" onChange={formHandler} className="w-full px-2 py-1 text-gray-700 bg-gray-200 rounded "/>
                     </div>
 
                     <div className="mt-2 flex flex-col gap-y-2">
-                        <label className="block text-sm text-gray-00">No Rekening</label>
-                        <input name="account" onChange={formHandler} className="w-full px-2 py-1 text-gray-700 bg-gray-200 rounded "/>
-                    </div>
-                    
-                    <div className="mt-2 flex flex-col gap-y-2">
-                        <label className="block text-sm text-gray-00">No Telefon</label>
-                        <input name="phone" onChange={formHandler} className="w-full px-2 py-1 text-gray-700 bg-gray-200 rounded "/>
+                        <label className="block text-sm text-gray-00">Alamat</label>
+                        <textarea onChange={formHandler} name="address" className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none" rows="4"></textarea>
                     </div>
 
                     <div className="btn self-end mt-8">

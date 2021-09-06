@@ -21,11 +21,10 @@ const AdminCard = props => {
                 backgroundColor: props.approved ? 'green' : null,
                 color: props.approved ? 'white' : null
             }}>
-                <div className="info w-6/12 my-5 ml-6">
-                    <h1 className="text-2xl font-bold">{props.name}</h1>
-                    <h1 className="my-4 text-xl font-bold">REK. {props.account}</h1>
-                    <h1 className="font-bold text-xl">Phone. {props.phone}</h1>
-                    <h1 className="font-lg mt-3">{props.address}</h1>
+                <div className="info w-6/12 my-5 ml-6 flex flex-col gap-y-8">
+                    <h1 className="text-2xl font-bold">Nama : {props.name}</h1>
+                    <h1 className="font-bold text-2xl">Telepon : {props.phone}</h1>
+                    <h1 className="font-xl font-semibold">{props.address}</h1>
                 </div>
                 <div className="self-end mr-8 mb-4">
                     <button className="bg-white px-4 py-2 rounded-lg"
