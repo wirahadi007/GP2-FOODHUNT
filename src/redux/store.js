@@ -5,7 +5,6 @@ import thunk from 'redux-thunk';
 const initialState = {
     data: [],
     order: [],
-    authenticated: false
 }
 
 const reducer = (state = initialState, action) => {
@@ -48,6 +47,13 @@ const reducer = (state = initialState, action) => {
         return {
             ...state,
             order: orderCopy
+        }
+    }
+
+    if (action.type === 'LOGIN') {
+        return {
+            ...state,
+            authenticated: true
         }
     }
 

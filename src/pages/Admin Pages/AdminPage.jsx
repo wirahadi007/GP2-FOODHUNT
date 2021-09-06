@@ -1,8 +1,10 @@
 import axios from 'axios';
 import React from 'react'
 import AdminCard from '../../components/Admin Card/AdminCard'
+import {useDispatch} from 'react-redux'
 
 const AdminPage = props => {
+    const dispatch = useDispatch();
     const [order, getOrder] = React.useState([]);
 
     React.useEffect(() => {
