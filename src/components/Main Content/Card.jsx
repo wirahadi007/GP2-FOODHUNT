@@ -9,7 +9,6 @@ const Cardcontent = () => {
   return (
     <div className="card-container w-full flex justify-center flex-col gap-y-8">
       <div className="title w-full text-center">
-        <h3 className="text-3xl">REKOMENDASI MENU</h3>
       </div>
       <div className="cards flex flex-wrap justify-center gap-x-24 gap-y-16">
 

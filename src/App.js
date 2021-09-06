@@ -13,10 +13,7 @@ import OrderPage from './pages/OrderPages/OrderPage';
 function App() {
   const state = useSelector(state => state.data);
   const dispatch = useDispatch();  
-
-  console.log(state)
-
-
+  // Memasukkan barang ke state
   React.useEffect(() => {
     axios.get('https://www.themealdb.com/api/json/v1/1/list.php?c=list').then(res => {
       let data = res.data;
