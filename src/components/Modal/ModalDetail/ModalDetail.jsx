@@ -1,6 +1,20 @@
+import axios from "axios";
 import React from "react"
 
 const ModalDetail = (props) => {
+    const [bahan, setBahan] = React.useState({});
+
+    React.useEffect(() => {
+      axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${props.idMeal}`)
+      .then(res => {
+        let {strIngredient1, strIngredient2, strIngredient3} = res.data.meals[0];
+        setBahan({
+          strIngredient1,
+          strIngredient2,
+          strIngredient3
+        })
+      })
+    }, [])
 
     return (
         <div className="modalBg w-screen h-screen top-0 fixed flex justify-center items-center">
@@ -21,12 +35,12 @@ const ModalDetail = (props) => {
               </div>
               <div className="ingredients">
                   <div className="title"><p>
-                    Bahan</p></div>
+                    Bahan Utama</p></div>
                   <div className="info">
                     <ul>
-                      <li>• Nasi</li>
-                      <li>• Bawang</li>
-                      <li>• Telur</li>
+                      <li>• {bahan.strIngredient1}</li>
+                      <li>• {bahan.strIngredient2}</li>
+                      <li>• {bahan.strIngredient3}</li>
                     </ul>
                   </div>
               </div>

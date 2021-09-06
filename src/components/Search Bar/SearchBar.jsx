@@ -26,7 +26,7 @@ const SearchBar = props => {
                 <div className="flex w-6/12">
                     <input onChange={changeCategory} list="category" type="search" className="searchBox border-2 bg-gray-300 rounded-lg w-full px-4" placeholder="Masukan Kategori" value={props.category}/>
                     <datalist id="category">
-                        {option.map(el => <option value={el.strCategory} />)}
+                        {option.map((el, i) => <option key={i} value={el.strCategory} />)}
                     </datalist>
                 </div>
                 <div className="relative">
