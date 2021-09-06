@@ -7,7 +7,6 @@ import SearchBar from './../../components/Search Bar/SearchBar'
 
 const MainPage = () => {
     const state = useSelector(state => state.data);
-    console.log(state);
 
     return (
         <div className="Mainpage">
@@ -17,7 +16,7 @@ const MainPage = () => {
             <br />
             <br />
             <h3 className="text-3xl text-center">REKOMENDASI MENU</h3>
-            {state.map(el => <Cardcontent {...el} />)}
+            {state.map((el, i) => <Cardcontent key={i} {...el} />)}
         </div>
     )
 }

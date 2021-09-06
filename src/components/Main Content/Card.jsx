@@ -26,7 +26,7 @@ const Cardcontent = (props) => {
         </div>
       </div>
 
-      {openModal && <ModalDetail closeModal={setOpenModal}/>}
+      {openModal && <ModalDetail {...props} closeModal={setOpenModal}/>}
     </div>
   );
 }

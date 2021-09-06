@@ -9,14 +9,14 @@ const ModalDetail = (props) => {
                 <button onClick={() => props.closeModal(false)}> X </button>
               </div>
               <div className="tumb h-2/5">
-                  <img src="https://image.freepik.com/free-photo/fried-rice-with-shrimp-prawn-top-white-plate_1203-7537.jpg" alt="Image" className="h-full w-3/4"/>
+                  <img src={props.strMealThumb} alt="Image" className="h-full w-3/4"/>
               </div>
               <div className="info flex">
                   <div className="Nama w-1/2">
-                    <p className="font-bold">Nasi Goreng Pakdhe</p>
+                    <p className="font-bold">{props.strMeal}</p>
                   </div>
                   <div className="Harga w-1/2 flex justify-end">
-                    <p>Rp.15.000</p>
+                    <p>{props.price}</p>
                   </div>
               </div>
               <div className="ingredients">

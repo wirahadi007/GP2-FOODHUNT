@@ -7,7 +7,6 @@ export const getApi = category => {
               let data = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`);
               data = await data.data;
               let {meals} = data;
-              console.log(meals)
               meals = meals.map(el => {
                   return {
                     ...el,
