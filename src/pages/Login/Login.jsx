@@ -29,7 +29,8 @@ const Login = () => {
         }
 
         if (localStorage.getItem('authenticated')) {
-            history.push('/admin');
+            // history.push('/admin');
+            window.location.href = '/admin'
         }
     }
 
