@@ -14,9 +14,9 @@ const OrderCard = props => {
 
     return(
         <div className="flex w-12/12 h-48 my-4 justify-around bg-gray-300 rounded-lg">
-            <div className="info w-8/12 my-5">
-                <h1 className="text-2xl font-bold">{props.strMeal}</h1>
-                <h1 className="my-4 text-xl font-bold">Rp. {(props.price * props.quantity).toLocaleString()}</h1>
+            <div className="info w-8/12 my-5 mx-4">
+                <h1 className="text-xl font-bold">{props.strMeal}</h1>
+                <h1 className=" text-xl font-bold my-3">Rp. {(props.price * props.quantity).toLocaleString()}</h1>
                 <span className="font-bold text-xl">Quantity</span>
                 <input onChange={setQuantity} className="text-center ml-2 w-12 h-8" type="number" min="1" value={props.quantity} />
             </div>

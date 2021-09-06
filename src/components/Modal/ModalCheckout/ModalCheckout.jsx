@@ -2,6 +2,8 @@ import axios from 'axios';
 import React from 'react'
 import swal from 'sweetalert';
 
+import './ModalCheckout.css'
+
 const ModalCheckout = (props) => {
     const [form, setForm] = React.useState({});
 
@@ -35,7 +37,7 @@ const ModalCheckout = (props) => {
 
     return (
         <div className="modalBg w-screen h-screen top-0 fixed flex justify-center items-center">
-            <div className="modalCont w-1/2 h-4/5 items-center flex flex-col p-4 gap-y-4 ">
+            <div className="modalcheck h-4/5 items-center flex flex-col p-4 gap-y-4 ">
                 <form onSubmit={submitHandler} className="w-4/5 m-4 p-4 bg-white rounded shadow-xl gap-y-2 h-full flex flex-col gap-y-2">
                     <div className="header flex">
                         <p className="text-gray-800 font-medium w-1/2">Informasi Pembelian</p>
