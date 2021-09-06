@@ -17,7 +17,7 @@ const MainPage = () => {
             <br />
             <br />
             <h3 className="text-3xl text-center">REKOMENDASI MENU</h3>
-            {state.map(el => <Cardcontent />)}
+            {state.map(el => <Cardcontent {...el} />)}
         </div>
     )
 }
