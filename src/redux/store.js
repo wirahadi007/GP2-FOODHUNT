@@ -4,7 +4,8 @@ import thunk from 'redux-thunk';
 
 const initialState = {
     data: [],
-    order: []
+    order: [],
+    authenticated: false
 }
 
 const reducer = (state = initialState, action) => {

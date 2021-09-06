@@ -6,8 +6,8 @@ const Navbar = () => {
 
         <nav>
             <div className="flex gap-x-6 ml-4 p-2 text-yellow-500 font-semibold" >
-                    <p to="/Login">Login</p>
-                    <p to="/Order">Order</p>
+                    <Link to="/login">Login</Link>
+                    <Link to="/order">Order</Link>
             </div>
         </nav>
 
