@@ -12,6 +12,7 @@ export const getApi = category => {
                     ...el,
                     price: category === 'Beef' || category === 'Chicken' || category === 'Lamb' ? 30000 : 20000, 
                     category,
+                    quantity: 1,
                     carted: false
                   }
               });

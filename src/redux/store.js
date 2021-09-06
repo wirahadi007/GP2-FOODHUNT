@@ -15,6 +15,41 @@ const reducer = (state = initialState, action) => {
         }
     }
 
+    if (action.type === 'ADD_ITEM') {
+        const index = state.data.findIndex(el => el.idMeal === action.payload.idMeal);
+        let dataCopy = [...state.data];
+        dataCopy[index] = {...dataCopy[index], carted: true};
+
+        return {
+            ...state,
+            data: dataCopy,
+            order: [...state.order, action.payload]
+        }
+    }
+
+    if (action.type === 'REMOVE_ITEM') {
+        const index = state.data.findIndex(el => el.idMeal === action.payload.idMeal);
+        let dataCopy = [...state.data];
+        dataCopy[index] = {...dataCopy[index], carted: false};
+
+        return {
+            ...state,
+            data: dataCopy,
+            order: state.order.filter(el => el.idMeal !== action.payload.idMeal)
+        }
+    }
+
+    if (action.type === 'SET_QUANTITY') {
+        const index = state.order.findIndex(el => el.idMeal === action.payload.idMeal);
+        let orderCopy = [...state.order];
+        orderCopy[index] = {...orderCopy[index], quantity: action.payload.quantity};
+
+        return {
+            ...state,
+            order: orderCopy
+        }
+    }
+
     return state
 }
 

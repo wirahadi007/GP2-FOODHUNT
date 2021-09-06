@@ -1,6 +1,12 @@
-import React from 'react'
+import React from 'react';
+import {useSelector} from 'react-redux';
+import ModalOrderCard from './OrderCard';
+
+
 
 const ModalOrder = (props) => {
+    const order = useSelector(state => state.order);
+
     return (
         <div className="modalBg w-screen h-screen top-0 fixed flex justify-center items-center">
             <div className="modalCont w-1/3 h-4/5 bg-gray-200 shadow-lg flex flex-col rounded-lg">
@@ -13,49 +19,7 @@ const ModalOrder = (props) => {
                 </div>
 
                 <div className="lists flex flex-col bg-gray-300 m-2 h-4/5 overflow-auto rounded-md">
-                    <div className="flex felx-col p-2 bg-gray-400 m-8 rounded-md">
-                        <div className="tumb h-full w-1/3">
-                            <img src="https://image.freepik.com/free-photo/fried-rice-with-shrimp-prawn-top-white-plate_1203-7537.jpg" alt="Image" className="h-full w-full"/>
-                        </div>
-
-                        <div className="info flex flex-col w-2/3 justify-center p-2">
-                            <p className="text-right">Nasi Goreng Pakdhe</p>
-                            <p className="text-right">Rp. 15.000</p>
-                        </div>
-                    </div>
-
-                    <div className="flex felx-col p-2 bg-gray-400 m-8 rounded-md">
-                        <div className="tumb h-full w-1/3">
-                            <img src="https://image.freepik.com/free-photo/fried-rice-with-shrimp-prawn-top-white-plate_1203-7537.jpg" alt="Image" className="h-full w-full"/>
-                        </div>
-
-                        <div className="info flex flex-col w-2/3 justify-center p-2">
-                            <p className="text-right">Nasi Goreng Pakdhe</p>
-                            <p className="text-right">Rp. 15.000</p>
-                        </div>
-                    </div>
-
-                    <div className="flex felx-col p-2 bg-gray-400 m-8 rounded-md">
-                        <div className="tumb h-full w-1/3">
-                            <img src="https://image.freepik.com/free-photo/fried-rice-with-shrimp-prawn-top-white-plate_1203-7537.jpg" alt="Image" className="h-full w-full"/>
-                        </div>
-
-                        <div className="info flex flex-col w-2/3 justify-center p-2">
-                            <p className="text-right">Nasi Goreng Pakdhe</p>
-                            <p className="text-right">Rp. 15.000</p>
-                        </div>
-                    </div>
-
-                    <div className="flex felx-col p-2 bg-gray-400 m-8">
-                        <div className="tumb h-full w-1/3">
-                            <img src="https://image.freepik.com/free-photo/fried-rice-with-shrimp-prawn-top-white-plate_1203-7537.jpg" alt="Image" className="h-full w-full"/>
-                        </div>
-
-                        <div className="info flex flex-col w-2/3 justify-center p-2">
-                            <p className="text-right">Nasi Goreng Pakdhe</p>
-                            <p className="text-right">Rp. 15.000</p>
-                        </div>
-                    </div>
+                    {order.map(el => <ModalOrderCard {...el} />)}
                     
                 </div>
 
