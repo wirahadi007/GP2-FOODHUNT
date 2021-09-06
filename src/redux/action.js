@@ -17,7 +17,7 @@ export const getApi = category => {
                   }
               });
 
-              meals = meals.slice(0,5);
+              meals = meals.slice(0,6);
 
               dispatch({type: 'GET_API', payload: meals});
             } catch(err) {

@@ -19,10 +19,13 @@ const MainPage = () => {
         <div className="Mainpage">
             <Header/>
             <SearchBar category={category} setCategory={setCategory}/>
-            <br />
-            <br />
-            <h3 className="text-3xl text-center">REKOMENDASI MENU</h3>
-            {filter.map((el, i) => <Cardcontent key={i} {...el} />)}
+
+            
+            <div className="card-container w-full flex justify-center flex-col gap-y-8 mt-16">
+                <div className="cards flex flex-wrap justify-center gap-x-24 gap-y-16">
+                    {filter.map((el, i) => <Cardcontent key={i} {...el} />)}
+                </div>
+            </div>
         </div>
     )
 }

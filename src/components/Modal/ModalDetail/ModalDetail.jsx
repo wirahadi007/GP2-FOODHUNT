@@ -38,7 +38,7 @@ const ModalDetail = (props) => {
                 <button onClick={() => props.closeModal(false)}> X </button>
               </div>
               <div className="tumb h-2/5">
-                  <img src={props.strMealThumb} alt="Image" className="h-full w-3/4"/>
+                  <img src={props.strMealThumb} alt="Image" className="h-full w-3/4 rounded-md"/>
               </div>
               <div className="info flex">
                   <div className="Nama w-1/2">
