@@ -3,7 +3,7 @@ import AdminCard from '../../components/Admin Card/AdminCard'
 
 const AdminPage = props => {
     return (
-        <div className="px-8 my-4">
+        <div className="px-8 my-6">
             <h1 className="text-2xl font-bold">Order Admin</h1>
             <AdminCard />
             <AdminCard />
