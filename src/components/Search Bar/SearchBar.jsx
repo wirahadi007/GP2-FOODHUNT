@@ -3,9 +3,13 @@ import React from 'react';
 import { useState } from 'react';
 import ModalOrder from '../Modal/ModalOrder/ModalOrder';
 import cart from './cart.png';
-import './SearchBar.css'
+import './SearchBar.css';
+
+import {useSelector} from 'react-redux';
 
 const SearchBar = props => {
+    const order = useSelector(state => state.order)
+
     const [openModal,setOpenModal] = useState(false)
     const [option, setOption] = useState([]);
 
@@ -32,7 +36,7 @@ const SearchBar = props => {
                 <div className="relative">
                     <a onClick={() => setOpenModal(true)} className="cursor-pointer">
                         <div className="absolute w-6 bg-gray-400 rounded-full text-center">
-                            1
+                            {order.length}
                         </div>
                         <img className="w-6/12 yellow-300" src={cart} alt="no"/>
                     </a>
