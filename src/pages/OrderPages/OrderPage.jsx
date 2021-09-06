@@ -24,7 +24,7 @@ const OrderPage = props => {
                     >Checkout</button>
                 </div>
             </div>
-            {openModal && <ModalCheckout closeModal={setOpenModal}/>}
+            {openModal && <ModalCheckout order={order} closeModal={setOpenModal}/>}
         </>
     )
 }
