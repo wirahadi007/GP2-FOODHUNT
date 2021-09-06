@@ -3,7 +3,6 @@ import {useSelector} from 'react-redux';
 
 import Cardcontent from "../../components/Main Content/Card";
 import Header from "../../components/Navbar/Header"
-import Navbar from "../../components/Navbar/NavBar";
 import SearchBar from './../../components/Search Bar/SearchBar'
 
 const MainPage = () => {
@@ -18,7 +17,6 @@ const MainPage = () => {
 
     return (
         <div className="Mainpage">
-            <Navbar/>
             <Header/>
             <SearchBar category={category} setCategory={setCategory}/>
             <br />

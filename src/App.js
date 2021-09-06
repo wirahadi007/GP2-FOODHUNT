@@ -9,6 +9,11 @@ import {useDispatch, useSelector} from 'react-redux'
 import AdminPage from './pages/Admin Pages/AdminPage';
 import MainPage from './pages/MainPages/MainPage';
 import OrderPage from './pages/OrderPages/OrderPage';
+import Login from './pages/Login/Login'
+
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import PrivateRoute from './routes/PrivateRoute';
+import Navbar from './components/Navbar/NavBar'
 
 function App() {
   const state = useSelector(state => state.data);
@@ -19,14 +24,27 @@ function App() {
       let data = res.data;
       let meals = data.meals;
       meals.forEach(el => dispatch(getApi(el.strCategory)))
-    })
+    });
+
+    const auth = localStorage.getItem('authenticated');
+
+    if (auth === 'true') {
+      dispatch({type: 'LOGIN'})
+    }
+
   }, [])
 
   return (
     <div className="App">
-      <MainPage />
-      <OrderPage />
-      <AdminPage />
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route exact path='/login' component={Login} />
+          <Route exact path='/' component={MainPage}/>
+          <Route exact path='/order' component={OrderPage}/>
+          <PrivateRoute exact path='/admin' component={AdminPage}/>
+        </Switch>
+      </Router>
     </div>
   );
 }
