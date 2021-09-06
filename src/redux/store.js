@@ -39,6 +39,17 @@ const reducer = (state = initialState, action) => {
         }
     }
 
+    if (action.type === 'SET_QUANTITY') {
+        const index = state.order.findIndex(el => el.idMeal === action.payload.idMeal);
+        let orderCopy = [...state.order];
+        orderCopy[index] = {...orderCopy[index], quantity: action.payload.quantity};
+
+        return {
+            ...state,
+            order: orderCopy
+        }
+    }
+
     return state
 }
 
