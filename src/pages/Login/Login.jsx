@@ -26,12 +26,10 @@ const Login = () => {
             localStorage.setItem('authenticated', true);
         } else {
             alert('Login gagal');
+            return 
         }
 
-        if (localStorage.getItem('authenticated')) {
-            // history.push('/admin');
-            window.location.href = '/admin'
-        }
+        history.push('/admin')
     }
 
     return (

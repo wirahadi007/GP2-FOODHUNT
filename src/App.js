@@ -16,6 +16,7 @@ import PrivateRoute from './routes/PrivateRoute';
 import Navbar from './components/Navbar/NavBar'
 
 function App() {
+  const auth = useSelector(state => state.auth);
   const state = useSelector(state => state.data);
   const dispatch = useDispatch();  
   // Memasukkan barang ke state
@@ -25,6 +26,12 @@ function App() {
       let meals = data.meals;
       meals.forEach(el => dispatch(getApi(el.strCategory)))
     });
+  }, []);
+
+  React.useEffect(() => {
+    if (localStorage.getItem('authenticated')) {
+      dispatch({type: 'LOGIN'});
+    }
   }, [])
 
   return (
