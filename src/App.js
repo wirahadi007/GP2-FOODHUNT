@@ -25,13 +25,6 @@ function App() {
       let meals = data.meals;
       meals.forEach(el => dispatch(getApi(el.strCategory)))
     });
-
-    const auth = localStorage.getItem('authenticated');
-
-    if (auth === 'true') {
-      dispatch({type: 'LOGIN'})
-    }
-
   }, [])
 
   return (

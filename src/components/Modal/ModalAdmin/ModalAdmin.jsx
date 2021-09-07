@@ -2,11 +2,13 @@ import React from 'react'
 import ListOrder from './ListOrder';
 import axios from 'axios'
 
+import './ModalAdmin.css'
+
 const ModalAdmin = (props) => {
 
     return (
-        <div className="modalBg w-screen h-screen top-0 fixed flex justify-center items-center">
-            <div className="modalCont w-1/2 h-4/5 items-center bg-gray-200 shadow-lg flex flex-col p-4 gap-y-4 rounded-md">
+        <div className="modalBg w-screen h-screen top-0 fixed flex justify-center items-center" style={{left: 0}}>
+            <div className="modalAdmin h-4/5 items-center bg-gray-200 shadow-lg flex flex-col p-4 gap-y-4 rounded-md">
                 <div className="closeBtn self-end">
                     <p className="text-right font-semibold text-2xl cursor-pointer w-auto"
                     onClick={() => props.closeModal(false)}

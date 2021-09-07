@@ -33,12 +33,12 @@ const SearchBar = props => {
                         {option.map((el, i) => <option key={i} value={el.strCategory} />)}
                     </datalist>
                 </div>
-                <div className="relative">
+                <div className="relative w-24">
                     <a onClick={() => setOpenModal(true)} className="cursor-pointer">
                         <div className="absolute w-6 bg-gray-400 rounded-full text-center">
                             {order.length}
                         </div>
-                        <img className="w-6/12 yellow-300" src={cart} alt="no"/>
+                        <img className="w-8/12 yellow-300" src={cart} alt="no"/>
                     </a>
                 </div>
             </div>
