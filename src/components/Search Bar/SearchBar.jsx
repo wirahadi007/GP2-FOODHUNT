@@ -28,12 +28,7 @@ const SearchBar = props => {
     return (
         <>
             <div className="flex justify-center gap-x-4">
-                <div className="flex w-6/12">
-                    <input onChange={changeCategory} list="category" type="search" className="searchBox border-2 bg-gray-300 rounded-lg w-full px-4" placeholder="Masukan Kategori" value={props.category}/>
-                    <datalist id="category">
-                        {option.map((el, i) => <option key={i} value={el.strCategory} />)}
-                    </datalist>
-                </div>
+                
                 <div className="relative w-24">
                     <a onClick={() => history.push("/order")} className="cursor-pointer">
                         <div className="absolute w-6 bg-gray-400 rounded-full text-center">
@@ -42,6 +37,9 @@ const SearchBar = props => {
                         <img className="w-8/12 yellow-300" src={cart} alt="no"/>
                     </a>
                 </div>
+            </div>
+            <div className="flex flex-wrap justify-center">
+                {option.map((el, i) => <div className="p-2 m-2 bg-blue-300" key={i}>{el.strCategory}</div>)}
             </div>
         </>
     )

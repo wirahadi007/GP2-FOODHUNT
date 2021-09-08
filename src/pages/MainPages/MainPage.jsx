@@ -27,8 +27,6 @@ const MainPage = () => {
         <div className="Mainpage">
             <Header/>
             <SearchBar category={category} setCategory={setCategory}/>
-
-            
             <div className="card-container w-full flex justify-center flex-col gap-y-8 mt-16">
                 <div className="cards flex flex-wrap justify-center gap-x-24 gap-y-16">
                     {filter.map((el, i) => <Cardcontent key={i} {...el} />)}
