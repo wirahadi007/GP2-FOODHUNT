@@ -30,7 +30,7 @@ const ModalCheckout = (props) => {
         });
         swal({
             title: "Pesanan Diterima!",
-            text: "Silahkan tunggu informasi lebih lanjut lewat WhatsApp :",
+            text: "Silahkan Tunggu, pesanan akan diantar ke meja anda",
             icon: "success",
             });
         
