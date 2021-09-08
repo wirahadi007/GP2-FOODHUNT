@@ -45,6 +45,8 @@ const Login = () => {
                 <input
                 className="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
                 type="text" onChange={loginHandler} placeholder="Userame" name="username"
+                required
+                autoComplete="off"
                 />
             </div>
             <div className="m-4">
@@ -58,6 +60,8 @@ const Login = () => {
                 className="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
                 name="password" onChange={loginHandler}
                 type="password"
+                required
+                autoComplete="off"
                 />
             </div>
             <div className="p-2 w-full">
