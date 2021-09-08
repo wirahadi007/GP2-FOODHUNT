@@ -33,11 +33,7 @@ const Login = () => {
     }
 
     return (
-        // <form onSubmit={submitHandler}>
-        //     <input onChange={loginHandler} name="username" type="text" placeholder="Username"/>
-        //     <input onChange={loginHandler} name="password" type="password" placeholder="Password"/>
-        //     <button type="submit">Login</button>
-        // </form>
+        
         <div>
 
         <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 max-w-md mx-auto sm:max-w-xl" onSubmit={submitHandler}>
