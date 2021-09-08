@@ -63,14 +63,6 @@ const ModalCheckout = (props) => {
                             <option value="4">4</option>
                             <option value="5">5</option>
                         </select>
-                        {/* <input list="category" type="search" className="w-full px-2 py-1 text-gray-700 bg-gray-200 rounded"/> */}
-                        {/* <datalist id="category">
-                            <option value="1"></option>
-                            <option value="2"></option>
-                            <option value="3"></option>
-                            <option value="4"></option>
-                            <option value="5"></option>
-                        </datalist> */}
                     </div>
 
                     <div className="btn self-end mt-8">
