@@ -70,18 +70,6 @@ const Login = () => {
             <button type="submit" className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Login</button>
           </div>
         </form>
-
-        {/* Login<br /><br />
-        <div>
-          Username<br />
-          <input type="text" {...username} autoComplete="new-password" />
-        </div>
-        <div style={{ marginTop: 10 }}>
-          Password<br />
-          <input type="password" {...password} autoComplete="new-password" />
-        </div>
-        {error && <><small style={{ color: 'red' }}>{error}</small><br /></>}<br />
-        <input type="button" value={loading ? 'Loading...' : 'Login'} onClick={handleLogin} disabled={loading} /><br /> */}
       </div>
     )
 }
