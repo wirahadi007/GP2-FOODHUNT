@@ -18,6 +18,7 @@ const ModalCheckout = (props) => {
             ...form,
             [name]: value
         });
+        console.log(form);
     }
 
     const submitHandler = async e => {
@@ -53,13 +54,23 @@ const ModalCheckout = (props) => {
                     </div>
 
                     <div className="mt-2 flex flex-col gap-y-2">
-                        <label className="block text-sm text-gray-00">No Telepon</label>
-                        <input autoComplete="off" required name="phone" type="number" onChange={formHandler} className="w-full px-2 py-1 text-gray-700 bg-gray-200 rounded "/>
-                    </div>
-
-                    <div className="mt-2 flex flex-col gap-y-2">
-                        <label className="block text-sm text-gray-00">Alamat</label>
-                        <textarea autoComplete="off" required onChange={formHandler} name="address" className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none" rows="4"></textarea>
+                        <label className="block text-sm">No Meja</label>
+                        <select name="table" className="w-full px-2 py-1 text-gray-700 bg-gray-200 rounded" placeholder="no meja" required onChange={formHandler}>
+                            <option value=""></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        {/* <input list="category" type="search" className="w-full px-2 py-1 text-gray-700 bg-gray-200 rounded"/> */}
+                        {/* <datalist id="category">
+                            <option value="1"></option>
+                            <option value="2"></option>
+                            <option value="3"></option>
+                            <option value="4"></option>
+                            <option value="5"></option>
+                        </datalist> */}
                     </div>
 
                     <div className="btn self-end mt-8">
