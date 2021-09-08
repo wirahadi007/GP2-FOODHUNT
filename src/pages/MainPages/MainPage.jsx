@@ -12,7 +12,19 @@ const MainPage = () => {
     const [filter, setFilter] = React.useState([]);
     
     React.useEffect(() => {
-        setFilter(state.filter(el => el.category === category));
+        // setFilter(state.filter(el => el.category === category));
+        function result(x) {
+            let result = [];
+            let arr = x.split(' ');
+            arr.forEach(el => {
+                result.push(state.filter(x => x.category === el))
+            });
+            result = result.filter(el => el.length !== 0);
+            result = result.flat(1);
+            return result
+        } 
+
+        setFilter(result(category));
     }, [category]);
 
     React.useEffect(() => {
