@@ -12,7 +12,6 @@ const AdminCard = props => {
         await axios.put(`https://6131f19fab7b1e001799b262.mockapi.io/orders/${id}`, {
             ...props,
             approved: true,
-            date: new Date()
         });
     }
 
